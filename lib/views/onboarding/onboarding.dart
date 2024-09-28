@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
+import 'package:task_manager/components/logo_image.dart';
+import 'package:task_manager/constants/app_assets.dart';
+import 'package:task_manager/constants/app_colors.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -8,10 +14,66 @@ class Onboarding extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
-        child: Column(
-          children: [
-            Text('Onboarding'),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 3.w),
+          child: Column(
+            children: [
+              const Row(
+                children: [
+                  LogoImage(),
+                ],
+              ),
+              Gap(5.h),
+              Container(
+                width: 100.w,
+                height: 40.h,
+                decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.2),
+                  image: const DecorationImage(
+                    image: AssetImage(onboardingImage),
+                  ),
+                ),
+              ),
+              Gap(5.h),
+              RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  text: 'Manage your \nTask with',
+                  style: TextStyle(
+                    fontSize: 28.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: '\nDayTask',
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontSize: 28.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Gap(5.h),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(1.w),
+                  color: primaryColor,
+                ),
+                height: 7.h,
+                child: Text(
+                  'Get Started',
+                  style: TextStyle(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

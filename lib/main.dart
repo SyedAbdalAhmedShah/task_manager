@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import 'package:task_manager/constants/app_colors.dart';
 import 'package:task_manager/views/onboarding/onboarding.dart';
 
@@ -11,15 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Task Manager',
-      theme: ThemeData(
-        scaffoldBackgroundColor: scaffoldColor,
-        textTheme: TextTheme(),
-        colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
-        useMaterial3: true,
+    return Sizer(
+      builder: (context, orientation, deviceType) => MaterialApp(
+        title: 'Task Manager',
+        theme: ThemeData(
+          scaffoldBackgroundColor: scaffoldColor,
+          textTheme: GoogleFonts.interTextTheme(),
+          colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
+          useMaterial3: true,
+        ),
+        home: const Onboarding(),
       ),
-      home: const Onboarding(),
     );
   }
 }
