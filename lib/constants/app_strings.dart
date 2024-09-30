@@ -1,0 +1,15 @@
+const appName = '\n DayTask';
+const appTagline = 'Manage your \nTask with';
+const getStarted = 'Get Started';
+const welcomeBack = 'Welcome Back';
+const email = 'Email Address';
+const password = 'Password';
+const forgotPassword = 'Forgot Password?';
+const signIn = 'Sign In';
+const signUp = 'Sign Up';
+const dontHaveAccount = "Don't have an account?";
+const signUpNow = 'Sign Up Now';
+const alreadyHaveAccount = 'Already have an account?';
+const enterEmail = "Enter your email";
+const enterPassword = "Enter your password";
+const orContinueWith = 'Or continue with';
