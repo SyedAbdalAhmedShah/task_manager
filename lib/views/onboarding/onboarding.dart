@@ -5,6 +5,8 @@ import 'package:task_manager/components/logo_image.dart';
 import 'package:task_manager/components/primary_button.dart';
 import 'package:task_manager/constants/app_assets.dart';
 import 'package:task_manager/constants/app_colors.dart';
+import 'package:task_manager/utils/extensions.dart';
+import 'package:task_manager/views/auth/sign_in_view.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -58,7 +60,9 @@ class Onboarding extends StatelessWidget {
               Gap(5.h),
               PrimaryButton(
                 text: 'Get Started',
-                onPressed: () {},
+                onPressed: () {
+                  context.navigateTo(const SignInView());
+                },
               ),
             ],
           ),
