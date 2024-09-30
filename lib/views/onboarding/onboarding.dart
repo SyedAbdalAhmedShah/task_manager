@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:task_manager/components/logo_image.dart';
+import 'package:task_manager/components/primary_button.dart';
 import 'package:task_manager/constants/app_assets.dart';
 import 'package:task_manager/constants/app_colors.dart';
 
@@ -56,21 +56,9 @@ class Onboarding extends StatelessWidget {
                 ),
               ),
               Gap(5.h),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(1.w),
-                  color: primaryColor,
-                ),
-                height: 7.h,
-                child: Text(
-                  'Get Started',
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              PrimaryButton(
+                text: 'Get Started',
+                onPressed: () {},
               ),
             ],
           ),
