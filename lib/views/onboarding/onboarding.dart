@@ -19,53 +19,55 @@ class Onboarding extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 3.w),
-          child: Column(
-            children: [
-              const Row(
-                children: [
-                  LogoImage(),
-                ],
-              ),
-              Gap(5.h),
-              Container(
-                width: 100.w,
-                height: 40.h,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.2),
-                  image: const DecorationImage(
-                    image: AssetImage(onboardingImage),
-                  ),
-                ),
-              ),
-              Gap(5.h),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  text: appTagline,
-                  style: TextStyle(
-                    fontSize: 28.sp,
-                    fontWeight: FontWeight.w600,
-                  ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Row(
                   children: [
-                    TextSpan(
-                      text: appName,
-                      style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 28.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    LogoImage(),
                   ],
                 ),
-              ),
-              Gap(5.h),
-              PrimaryButton(
-                text: getStarted,
-                onPressed: () {
-                  context.navigateTo(const SignInView());
-                },
-              ),
-            ],
+                Gap(5.h),
+                Container(
+                  width: 100.w,
+                  height: 40.h,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.2),
+                    image: const DecorationImage(
+                      image: AssetImage(onboardingImage),
+                    ),
+                  ),
+                ),
+                Gap(5.h),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: appTagline,
+                    style: TextStyle(
+                      fontSize: 28.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: appName,
+                        style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 28.sp,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Gap(5.h),
+                PrimaryButton(
+                  text: getStarted,
+                  onPressed: () {
+                    context.navigateTo(const SignInView());
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
