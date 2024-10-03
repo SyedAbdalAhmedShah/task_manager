@@ -14,14 +14,15 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
+      borderRadius: BorderRadius.circular(3.w),
       onTap: onPressed,
       child: Container(
         width: double.infinity,
         height: 7.h,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(1.w),
+          borderRadius: BorderRadius.circular(3.w),
           color: primaryColor,
         ),
         child: Text(

@@ -15,7 +15,8 @@ class SecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
+      borderRadius: BorderRadius.circular(3.w),
       onTap: onPressed,
       child: Container(
         width: double.infinity,
@@ -23,7 +24,7 @@ class SecondaryButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.white),
-          borderRadius: BorderRadius.circular(1.w),
+          borderRadius: BorderRadius.circular(3.w),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
