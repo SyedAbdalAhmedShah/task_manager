@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:task_manager/constants/app_colors.dart';
+import 'package:task_manager/main.dart';
 
 class AppTextField extends StatelessWidget {
   final String hintText;
@@ -21,7 +23,10 @@ class AppTextField extends StatelessWidget {
         fillColor: textColorSecondary.withOpacity(0.1),
         hintText: hintText,
         hintStyle: const TextStyle(color: Colors.white),
-        prefixIcon: Icon(prefixIcon, color: textColorSecondary),
+        prefixIcon: Icon(
+          prefixIcon,
+          color: textColorSecondary,
+        ),
         suffixIcon: suffixIcon != null
             ? Icon(suffixIcon, color: textColorSecondary)
             : null,

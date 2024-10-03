@@ -4,7 +4,9 @@ import 'package:task_manager/constants/app_colors.dart';
 import 'package:task_manager/constants/app_strings.dart';
 
 class SignupPrompt extends StatelessWidget {
-  const SignupPrompt({super.key});
+  final Function() onPressed;
+  final String text;
+  const SignupPrompt({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +21,12 @@ class SignupPrompt extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {
-            // TODO: Implement navigation to sign up page
-          },
+          onPressed: onPressed,
           style: TextButton.styleFrom(
             padding: EdgeInsets.zero,
           ),
           child: Text(
-            signUpNow,
+            text,
             style: TextStyle(
               color: primaryColor,
               fontSize: 12.sp,

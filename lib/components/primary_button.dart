@@ -16,7 +16,7 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(3.w),
-      onTap: onPressed,
+       onTap: onPressed,
       child: Container(
         width: double.infinity,
         height: 7.h,

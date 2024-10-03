@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
 import 'package:task_manager/components/app_text_field.dart';
+import 'package:task_manager/components/forgot_password.dart';
 import 'package:task_manager/components/logo_image.dart';
 import 'package:task_manager/components/or_divider.dart';
 import 'package:task_manager/components/primary_button.dart';
@@ -9,6 +10,8 @@ import 'package:task_manager/components/secondary_button.dart';
 import 'package:task_manager/components/signup_prompt.dart';
 import 'package:task_manager/constants/app_colors.dart';
 import 'package:task_manager/constants/app_strings.dart';
+import 'package:task_manager/utils/extensions.dart';
+import 'package:task_manager/views/auth/sign_up_view.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -65,21 +68,7 @@ class SignInView extends StatelessWidget {
                 suffixIcon: Icons.visibility_off,
               ),
               Gap(2.h),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    // TODO: Implement forgot password functionality
-                  },
-                  child: Text(
-                    forgotPassword,
-                    style: TextStyle(
-                      color: textColorSecondary,
-                      fontSize: 12.sp,
-                    ),
-                  ),
-                ),
-              ),
+              const ForgotPassword(),
               Gap(3.h),
               PrimaryButton(
                 text: signIn,
@@ -93,7 +82,12 @@ class SignInView extends StatelessWidget {
                 onPressed: () {},
               ),
               Gap(1.h),
-              const SignupPrompt(),
+              SignupPrompt(
+                onPressed: () {
+                  context.push(const SignUpView());
+                },
+                text: signUp,
+              ),
             ],
           ),
         ),

@@ -63,7 +63,7 @@ class Onboarding extends StatelessWidget {
                 PrimaryButton(
                   text: getStarted,
                   onPressed: () {
-                    context.navigateTo(const SignInView());
+                    context.push(const SignInView());
                   },
                 ),
               ],

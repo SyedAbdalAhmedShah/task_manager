@@ -8,8 +8,10 @@ extension ContextExtension on BuildContext {
   double get height => size.height;
   double get width => size.width;
 
-  void navigateTo(Widget widget) => Navigator.push(
+  void push(Widget widget) => Navigator.push(
         this,
         MaterialPageRoute(builder: (context) => widget),
       );
+
+  void pop() => Navigator.pop(this);
 }
