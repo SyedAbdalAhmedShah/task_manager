@@ -6,6 +6,7 @@ import 'package:task_manager/components/logo_image.dart';
 import 'package:task_manager/components/or_divider.dart';
 import 'package:task_manager/components/primary_button.dart';
 import 'package:task_manager/components/secondary_button.dart';
+import 'package:task_manager/components/signup_prompt.dart';
 import 'package:task_manager/constants/app_colors.dart';
 import 'package:task_manager/constants/app_strings.dart';
 
@@ -86,11 +87,13 @@ class SignInView extends StatelessWidget {
               ),
               Gap(5.h),
               const OrDivider(),
-              Gap(2.h),
+              Gap(5.h),
               SecondaryButton(
                 text: continueWithGoogle,
                 onPressed: () {},
               ),
+              Gap(1.h),
+              const SignupPrompt(),
             ],
           ),
         ),
