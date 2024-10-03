@@ -13,3 +13,4 @@ const alreadyHaveAccount = 'Already have an account?';
 const enterEmail = "Enter your email";
 const enterPassword = "Enter your password";
 const orContinueWith = 'Or continue with';
+const continueWithGoogle = 'Google';

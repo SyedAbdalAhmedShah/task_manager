@@ -3,7 +3,9 @@ import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
 import 'package:task_manager/components/app_text_field.dart';
 import 'package:task_manager/components/logo_image.dart';
+import 'package:task_manager/components/or_divider.dart';
 import 'package:task_manager/components/primary_button.dart';
+import 'package:task_manager/components/secondary_button.dart';
 import 'package:task_manager/constants/app_colors.dart';
 import 'package:task_manager/constants/app_strings.dart';
 
@@ -83,31 +85,11 @@ class SignInView extends StatelessWidget {
                 onPressed: () {},
               ),
               Gap(5.h),
-              Row(
-                children: [
-                  const Expanded(
-                    child: Divider(
-                      color: textColorSecondary,
-                      thickness: 1,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 2.w),
-                    child: Text(
-                      orContinueWith,
-                      style: TextStyle(
-                        color: textColorSecondary,
-                        fontSize: 12.sp,
-                      ),
-                    ),
-                  ),
-                  const Expanded(
-                    child: Divider(
-                      color: textColorSecondary,
-                      thickness: 1,
-                    ),
-                  ),
-                ],
+              const OrDivider(),
+              Gap(2.h),
+              SecondaryButton(
+                text: continueWithGoogle,
+                onPressed: () {},
               ),
             ],
           ),
