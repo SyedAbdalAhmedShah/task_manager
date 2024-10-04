@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import 'package:task_manager/constants/app_colors.dart';
-import 'package:task_manager/main.dart';
+
 
 class AppTextField extends StatelessWidget {
   final String hintText;
